@@ -7,7 +7,9 @@ void main(List<String> args) {
   print(calculaVolumeCilindrico(diametro: 5, altura: 10));
   print(calculaVolumeCubico(altura: 10, largura: 7, comprimento: 7));
   print(calculaDiametroPorCircunferencia(circunferencia: 10));
-  print(calculaAumentoPercentual(valorInicial: 450, valorFinal: 400));
+  print(calculaAumentoPercentual(valorInicial: 5.3, valorFinal: 7.4));
+  print(regraTres(num1: 10, num2: 18, num3: 15));
+  print(regraTresComposta(num1: 5, num2: 4, num3: 15, num4: 2, num5: 3));
 }
 
 List<DateTime> periodicidade({
@@ -66,4 +68,22 @@ double calculaDiametroPorCircunferencia({required double circunferencia}) {
 double calculaAumentoPercentual({required double valorInicial, required double valorFinal}) {
   double aumento = valorFinal - valorInicial;
   return (aumento / valorInicial) * 100;
+}
+
+double regraTres({
+  required double num1,
+  required double num2,
+  required double num3,
+}) {
+  return (num2 * num3) / num1;
+}
+
+double regraTresComposta({
+  required double num1,
+  required double num2,
+  required double num3,
+  required double num4,
+  required double num5,
+}) {
+  return (num4 * num5) * num3 / (num1 * num2);
 }
