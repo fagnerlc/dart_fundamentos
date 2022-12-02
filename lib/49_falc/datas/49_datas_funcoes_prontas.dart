@@ -8,8 +8,9 @@ void main(List<String> args) {
   print(calculaVolumeCubico(altura: 10, largura: 7, comprimento: 7));
   print(calculaDiametroPorCircunferencia(circunferencia: 10));
   print(calculaAumentoPercentual(valorInicial: 5.3, valorFinal: 7.4));
-  print(regraTres(num1: 10, num2: 18, num3: 15));
+  print(regraTresSimples(num1: 10, num2: 18, num3: 15));
   print(regraTresComposta(num1: 5, num2: 4, num3: 15, num4: 2, num5: 3));
+  print(calculadoraDatas(dateTime: DateTime.now(), dias: 7, soma: false));
 }
 
 List<DateTime> periodicidade({
@@ -70,7 +71,7 @@ double calculaAumentoPercentual({required double valorInicial, required double v
   return (aumento / valorInicial) * 100;
 }
 
-double regraTres({
+double regraTresSimples({
   required double num1,
   required double num2,
   required double num3,
@@ -86,4 +87,25 @@ double regraTresComposta({
   required double num5,
 }) {
   return (num4 * num5) * num3 / (num1 * num2);
+}
+
+DateTime calculadoraDatas({
+  required DateTime dateTime,
+  required int dias,
+  required bool soma,
+}) {
+  if (soma) {
+    return dateTime.add(Duration(days: dias));
+  } else {
+    return dateTime.subtract(Duration(days: dias));
+  }
+}
+
+double calculaCalcarioTerra({
+  required double v1,
+  required double v2,
+  required double t,
+  required double prnt,
+}) {
+  return (v2 - v1) * t / prnt;
 }
