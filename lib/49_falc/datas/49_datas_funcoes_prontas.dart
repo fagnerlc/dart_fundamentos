@@ -1,40 +1,24 @@
 import 'dart:math';
 
 void main(List<String> args) {
-  print(periodicidade(dataEvento: DateTime.now(), ciclos: 7, periodicidade: 30));
-  print(calculaIdade(DateTime(1987, 01, 15)));
-  print(calculaIdade(DateTime(2021, 12, 01)));
-  print(calculaVolumeCilindrico(diametro: 5, altura: 10));
-  print(calculaVolumeCubico(altura: 10, largura: 7, comprimento: 7));
-  print(calculaDiametroPorCircunferencia(circunferencia: 10));
-  print(calculaAumentoPercentual(valorInicial: 5.3, valorFinal: 7.4));
-  print(regraTresSimples(num1: 10, num2: 18, num3: 15));
-  print(regraTresComposta(num1: 5, num2: 4, num3: 15, num4: 2, num5: 3));
-  print(calculadoraDatas(dateTime: DateTime.now(), dias: 7, soma: false));
-
-  double dosagem = calcularDosagem(10.0, 0.5);
-  print('dosagem: $dosagem');
-
-  double pesoIdeal = calcularPesoIdeal(50.0, 100.0);
-  print('pesoIdeal: $pesoIdeal');
-
-  double necessidadesCaloricas = calcularNecessidadesCaloricas(10.0);
-  print('necessidadesCaloricas: $necessidadesCaloricas');
-
-  double taxaCrescimento = calcularTaxaCrescimento(1000.0, 500.0, 10);
-  print(taxaCrescimento);
-
-  double imc = calcularIMC(103.0, 1.89);
-  print('imc: $imc'); // imprime 0.04
-
-  int frequenciaCardiacaMaxima = calcularFrequenciaCardiacaMaxima(5);
-  print('frequenciaCardiacaMaxima: $frequenciaCardiacaMaxima'); // imprime 215
-
-  double volumeAgua = calcularVolumeAgua(10.0);
-  print('volumeAgua: $volumeAgua'); // imprime 7.5
-
-  double areaSuperficialCorporal = calcularAreaSuperficialCorporal(10.0, 20.0);
-  print('areaSuperficialCorporal: $areaSuperficialCorporal');
+  print('periodicidade: ${periodicidade(dataEvento: DateTime.now(), ciclos: 7, periodicidade: 30)}');
+  print('calculaIdade: ${calculaIdade(DateTime(1987, 01, 15))}');
+  print('calculaIdade: ${calculaIdade(DateTime(2021, 12, 01))}');
+  print('calculaVolumeCilindrico: ${calculaVolumeCilindrico(diametro: 5, altura: 10)}');
+  print('calculaVolumeCubico: ${calculaVolumeCubico(altura: 10, largura: 7, comprimento: 7)}');
+  print('calculaDiametroPorCircunferencia: ${calculaDiametroPorCircunferencia(circunferencia: 10)}');
+  print('calculaAumentoPercentual: ${calculaAumentoPercentual(valorInicial: 5.3, valorFinal: 7.4)}');
+  print('regraTresSimples: ${regraTresSimples(num1: 10, num2: 18, num3: 15)}');
+  print('regraTresComposta: ${regraTresComposta(num1: 5, num2: 4, num3: 15, num4: 2, num5: 3)}');
+  print('calculadoraDatas: ${calculadoraDatas(dateTime: DateTime.now(), dias: 7, soma: false)}');
+  print('dosagem: ${calcularDosagem(10.0, 0.5)}');
+  print('pesoIdeal: ${calcularPesoIdeal(50.0, 100.0)}');
+  print('necessidadesCaloricas: ${calcularNecessidadesCaloricas(10.0)}');
+  print('taxaCrescimento: ${calcularTaxaCrescimento(1000.0, 500.0, 10)}');
+  print('imc: ${calcularIMC(103.0, 1.89)}'); // imprime 0.04
+  print('frequenciaCardiacaMaxima: ${calcularFrequenciaCardiacaMaxima(5)}'); // imprime 215
+  print('volumeAgua: ${calcularVolumeAgua(10.0)}'); // imprime 7.5
+  print('areaSuperficialCorporal: ${calcularAreaSuperficialCorporal(10.0, 20.0)}');
 }
 
 List<DateTime> periodicidade({
