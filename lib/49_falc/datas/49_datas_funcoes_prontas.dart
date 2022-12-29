@@ -11,6 +11,30 @@ void main(List<String> args) {
   print(regraTresSimples(num1: 10, num2: 18, num3: 15));
   print(regraTresComposta(num1: 5, num2: 4, num3: 15, num4: 2, num5: 3));
   print(calculadoraDatas(dateTime: DateTime.now(), dias: 7, soma: false));
+
+  double dosagem = calcularDosagem(10.0, 0.5);
+  print('dosagem: $dosagem');
+
+  double pesoIdeal = calcularPesoIdeal(50.0, 100.0);
+  print('pesoIdeal: $pesoIdeal');
+
+  double necessidadesCaloricas = calcularNecessidadesCaloricas(10.0);
+  print('necessidadesCaloricas: $necessidadesCaloricas');
+
+  double taxaCrescimento = calcularTaxaCrescimento(1000.0, 500.0, 10);
+  print(taxaCrescimento);
+
+  double imc = calcularIMC(103.0, 1.89);
+  print('imc: $imc'); // imprime 0.04
+
+  int frequenciaCardiacaMaxima = calcularFrequenciaCardiacaMaxima(5);
+  print('frequenciaCardiacaMaxima: $frequenciaCardiacaMaxima'); // imprime 215
+
+  double volumeAgua = calcularVolumeAgua(10.0);
+  print('volumeAgua: $volumeAgua'); // imprime 7.5
+
+  double areaSuperficialCorporal = calcularAreaSuperficialCorporal(10.0, 20.0);
+  print('areaSuperficialCorporal: $areaSuperficialCorporal');
 }
 
 List<DateTime> periodicidade({
@@ -108,4 +132,43 @@ double calculaCalcarioTerra({
   required double prnt,
 }) {
   return (v2 - v1) * t / prnt;
+}
+
+double calcularDosagem(double pesoAnimal, double concentracaoMedicamento) {
+  return pesoAnimal * concentracaoMedicamento; // dosagem
+}
+
+double calcularPesoIdeal(double alturaAnimal, double fatorConversao) {
+  return (alturaAnimal - fatorConversao) * 0.9; //peso
+}
+
+double calcularNecessidadesCaloricas(double pesoIdealAnimal) {
+  return (pesoIdealAnimal * 30) + 70; // kalorias
+}
+
+double calcularTaxaCrescimento(double pesoAtualAnimal, double pesoNascerAnimal, int idadeAnimal) {
+  return (pesoAtualAnimal - pesoNascerAnimal) / idadeAnimal;
+}
+
+double calcularIMC(double pesoAnimal, double alturaAnimal) {
+  return pesoAnimal / (alturaAnimal * alturaAnimal);
+}
+/*-------------------------------
+IMC	Classificação
+< 18,5	        Abaixo do peso
+18,5 - 24,9	    Peso ideal
+25,0 - 29,9	    Excesso de peso
+> 30,0	        Obesidade
+--------------------------------*/
+
+int calcularFrequenciaCardiacaMaxima(int idadeAnimal) {
+  return 220 - idadeAnimal;
+}
+
+double calcularVolumeAgua(double pesoAnimal) {
+  return pesoAnimal * 0.75;
+}
+
+double calcularAreaSuperficialCorporal(double comprimentoAnimal, double larguraAnimal) {
+  return (comprimentoAnimal * larguraAnimal) / 3.14;
 }

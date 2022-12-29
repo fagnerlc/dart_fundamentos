@@ -1,5 +1,3 @@
-import 'package:intl/intl.dart';
-
 void main(List<String> args) {
   String? nomeCompleto = 'Fagner Lopes Carvalho';
 
